@@ -2,15 +2,16 @@
 
 class Clock
 {
+    // default destructor
 private:
     int hour;
     int minute;
     int second;
-    Clock(const Clock&);
-    Clock& operator=(const Clock&);
+    Clock(const Clock&); // copy constructor disabled
+    Clock& operator=(const Clock&); // copy assignment disabled
 
 public:
-    Clock(int hour, int minute, int second)
+    Clock(int hour, int minute, int second) // initialize all fields
         : hour(hour),
           minute(minute),
           second(second)
