@@ -6,6 +6,8 @@ private:
     int hour;
     int minute;
     int second;
+    Clock(const Clock&);
+    Clock& operator=(const Clock&);
 
 public:
     Clock(int hour, int minute, int second)
