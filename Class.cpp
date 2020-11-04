@@ -28,6 +28,13 @@ public:
 
 int main()
 {
+    Clock clock1(12, 0, 0);
+    // Clock clock2(clock1); // cannot create instance based on clock1 (copy constructor is disabled)
+    Clock clock3(14, 0, 0);
+
+    // clock3 = clock1; // copy assignment is disabled
+
+    std::cout << clock1.getHour() << ":" << clock1.getMinute() << ":" << clock1.getSecond();
 
     return 0;
 }
