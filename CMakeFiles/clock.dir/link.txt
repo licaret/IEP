@@ -1,0 +1,1 @@
+/usr/bin/c++   -std=c++14  -rdynamic CMakeFiles/clock.dir/Class.cpp.o  -o clock 
