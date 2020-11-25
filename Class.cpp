@@ -45,11 +45,21 @@ public:
 
 int main()
 {
-    Clock clock1(157, 0, 0);
+    Clock clock1(12, 0, 0);
     // Clock clock2(clock1); // cannot create instance based on clock1 (copy constructor is disabled)
     Clock clock3(14, 0, 0);
-
-    std::cout << clock1.getHour() << ":" << clock1.getMinute() << ":" << clock1.getSecond() << '\n';
-
+ 
+    std::cout << "\nThe initial clocks:\n";
+    std::cout << "\tClock1 - " << clock1.getHour() << ":" << clock1.getMinute() << ":" << clock1.getSecond() << '\n';
+    std::cout << "\tClock3 - " << clock3.getHour() << ":" << clock3.getMinute() << ":" << clock3.getSecond() << '\n';
+ 
+    clock3 = clock1;
+ 
+    std::cout << "\nThe clocks after assignment:\n";
+    std::cout << "\tClock1 - " << clock1.getHour() << ":" << clock1.getMinute() << ":" << clock1.getSecond() << '\n';
+    std::cout << "\tClock3 - " << clock3.getHour() << ":" << clock3.getMinute() << ":" << clock3.getSecond() << '\n';
+ 
+    clock1 = clock1;
+    
     return 0;
 }
